@@ -2,9 +2,9 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import input_file_name, when
 
 # Create Spark session
-# spark = SparkSession.builder \
-#                     .appName("Healthcare Claims Ingestion") \
-#                     .getOrCreate()
+spark = SparkSession.builder \
+                    .appName("Healthcare Claims Ingestion") \
+                    .getOrCreate()
 
 # configure variables
 BUCKET_NAME = "healthcare-bucket-17-05-2026"

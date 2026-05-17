@@ -4,6 +4,11 @@ from pyspark.sql import SparkSession
 import datetime
 import json
 
+
+spark = SparkSession.builder \
+                    .appName("Hospital A MySQL to Landing") \
+                    .getOrCreate()
+
 # Initialize GCS & BigQuery Clients
 storage_client = storage.Client()
 bq_client = bigquery.Client()

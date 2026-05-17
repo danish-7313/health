@@ -8,6 +8,11 @@ import json
 storage_client = storage.Client()
 bq_client = bigquery.Client()
 
+
+spark = SparkSession.builder \
+                    .appName("Hospital B MySQL to Landing") \
+                    .getOrCreate() 
+
 # Google Cloud Storage (GCS) Configuration
 GCS_BUCKET = "healthcare-bucket-17-05-2026"
 HOSPITAL_NAME = "hospital-b"
